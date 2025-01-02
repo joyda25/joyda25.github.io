@@ -31,19 +31,35 @@ layout: default
             include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
             cache_bust=true
           %}
+          
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
-      </div>
-    {% endif %}
+        
+        <!-- Social -->
+        {% if page.social %}
+          <div class="social">
+            <div class="contact-icons">{% include social.liquid %}</div>
 
+            {% comment %}
+            <div class="contact-note">{{ site.contact_note }}</div>
+            {% endcomment %}
+          </div>
+        {% endif %}
+      </div>
+
+      
+    {% endif %}
+    
     <div class="clearfix">{{ content }}</div>
+
+    
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -59,19 +75,14 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Highlight publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
 
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
+    <!-- Miscellaneous -->
+    <p><strong>Misc.</strong> My name is pronounced as "You-been", and I like to play tennis🎾, guitar🎸, and run🏃🏻‍♀️, although I'm becoming less capable of doing so than before.</p>
+    
 
     {% if site.newsletter.enabled and site.footer_fixed %}
       {% include scripts/newsletter.liquid center=true %}

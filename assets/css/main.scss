@@ -21,5 +21,22 @@ $max-content-width: {{ site.max_width }};
   "font-awesome/regular",
   "tabler-icons/tabler-icons.scss",
   "tabler-icons/tabler-icons-filled.scss",
-  "tabler-icons/tabler-icons-outline.scss"
-;
+  "tabler-icons/tabler-icons-outline.scss";
+
+  .social {
+    .contact-icons {
+      display: flex;
+      justify-content: center; /* Align items to the left */
+      a {
+        font-size: 0.3em; /* Adjust the size as needed */
+        margin: 2px; /* Adjust the spacing as needed */
+      }
+    }
+  }
+
+  .news {
+    .news-date {
+      padding-left: 20px;
+      font-weight: normal !important; /* Ensure font weight is normal */
+    }
+  }

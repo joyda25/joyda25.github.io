@@ -8,6 +8,7 @@
   {% endif %}
 >
   <picture>
+  <div style="display:flex;justify-content:center;">
     <!-- Auto scaling with imagemagick -->
     <!--
       See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
@@ -76,6 +77,7 @@
       {% endif %}
       onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
     >
+    </div>
   </picture>
 
   {% if include.caption %}

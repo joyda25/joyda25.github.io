@@ -385,6 +385,10 @@ ul.task-list input[type="checkbox"] {
   .contact-icons {
     font-size: 4rem;
 
+    display: flex;
+    justify-content: center;
+
+
     a {
       i::before {
         color: var(--global-text-color);
@@ -1304,4 +1308,18 @@ ninja-keys::part(ninja-input-wrapper) {
 ::highlight(search) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
+}
+
+a.custom-link-black {
+  color: black !important;
+  text-decoration: none !important; /* Remove underline if desired */
+}
+
+a.custom-link-black:hover {
+  color: black !important; /* Ensure the color stays black on hover */
+  text-decoration: underline !important; /* Add underline on hover if desired */
+}
+
+.custom-text-color {
+  color: #0d59fc; /* Replace with your desired color */
 }
